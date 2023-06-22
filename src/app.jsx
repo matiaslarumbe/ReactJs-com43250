@@ -4,7 +4,10 @@ import NavBar from './components/NavBar/NavBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import  Header from './components/Header/Header';
-;
+
+// React router dom
+import {BrowserRouter as router, Routes, Route} from "react-router-dom"
+
 
 function App () {
     const [count,setCount] = useState(0)
@@ -12,8 +15,7 @@ function App () {
         <div>
             <NavBar />
             <Header />
-            
-                
+               
         </div>
           
     )

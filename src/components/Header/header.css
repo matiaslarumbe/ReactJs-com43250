@@ -1,6 +1,19 @@
 .card_container {
-display: flex;
+display:flex ;
 flex-wrap: wrap;
-justify-content:space-between ;
-margin: 30px;
+justify-content:space-between;
+margin: 20px;
+background: rgb(246,199,6);
+background: linear-gradient(90deg, rgba(246,199,6,1) 0%, rgba(244,216,30,0.9640231092436975) 39%, rgba(249,232,145,1) 100%)
+}
+
+.card{
+    margin-bottom: 20px;
+    
+}
+.button-container{
+    margin-bottom: 10px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
 }
