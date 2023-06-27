@@ -1,27 +1,23 @@
-import React from 'react'
-import product  from "../../Product"
-import {Row,Col, ListGroup, Button, ListGroupItem} from 'react-bootstrap'
-const DetailPage = ({ match }) => {
-    const product = product.find((p) => p.id === match.params.id)
-    return (
-    
-    
-            <Row>
-                <Col md={6}>
-                    <Image src={product.image} alt={product.name}/>
-                </Col>
-                <Col>
-                <ListGroupItem>
-                    Precio: ${product.price}
-                </ListGroupItem>
-                <ListGroupItem>
-                    {product.description}
-                </ListGroupItem>
-                </Col>
-                <Col></Col>
-            </Row>
+import React, {useState, useEffect} from 'react'
+import { useParams } from 'react-router-dom';
+import { getOneProduct } from '../../Product';
+import ItemDetail from '../ItemDetail/ItemDetail';
 
-        
+const DetailPage = () => {
+    const [product, setProduct]= useState({})
+
+    const {id} = useParams()
+
+    useEffect(()=>{
+        getOneProduct(id)
+        .then((res)=> setProduct(res))
+        .catch(error=> console.log(error))
+    },[id])
+   
+    return (
+    <div>
+        <ItemDetail product={product}/>
+    </div>
     )
 }
 export default DetailPage;
