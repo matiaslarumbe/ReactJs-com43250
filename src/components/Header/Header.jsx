@@ -2,7 +2,9 @@ import React from "react";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import "./header.css"
- 
+import { Link } from "react-router-dom";
+
+
 // imagenes de las card
 import Almendras from '../../assets/img/Products/almendras1.jpg'
 import Castañas from '../../assets/img/Products/castañas-de-caju2.jpg'
@@ -24,6 +26,7 @@ import Avena from '../../assets/img/Products/avena9.jpg'
 
 
 
+
 // Header (Estructura del header de la pagina)
 const Header = () => {
    
@@ -31,17 +34,21 @@ const Header = () => {
         <div className ="card_container" > 
              
             <Card style={{ width: '18rem' }}>
-           
+            
              <Card.Img variant="top" src= {Almendras} />
+               
                 <Card.Body>
+                    
                     <Card.Title>Card Title 1</Card.Title>
                     <Card.Text>
                     Some quick example text to build on the card title and make up the
                     bulk of the card's content.
                     </Card.Text> 
+                    
                     <div className ="button-container"> 
-                        
-                        <Button variant="primary">Ver Producto</Button>
+                    
+                        <Button variant="primary" >Ver Producto</Button>
+                 
                      <Button variant="primary">Comprar!</Button>
                      
                     </div> 
