@@ -1,14 +1,31 @@
 import React from 'react'
+import { useParams } from 'react-router-dom';
+import ItemList from '../ItemList/ItemList';
+import Item from '../Item/Item'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
-import "./item.css"
-const Item = ({product}) => {
+
+export const Category = () => {
+    const {categoryId} = useParams()
+
+    const ItemList = ({products}) => {
+        return (
+          <div style={{display:'flex', justifyContent:'space-aroud', alignItems:'center', flexWrap:'wrap'}}>
+              {products.map((product)=> <Item key={product.id} product={product}/>)}
+          </div>
+        )
+      }
+      let filteredCharacters = product.filter((Item) => {
+        return Item.category === categoryId;       
+      }
+      )
   return (
+    
     <div className='div_container'>
     <Card style={{ width: '18rem' }}>
             
-    <Card.Img variant="top" src={product.image} />
+    <Card.Img variant="top" src={product.image}/>
       
        <Card.Body>
            
@@ -29,5 +46,5 @@ const Item = ({product}) => {
    </div>
   )
 }
-
-export default Item
+  
+export default Category;

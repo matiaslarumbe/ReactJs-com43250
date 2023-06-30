@@ -33,6 +33,21 @@ const NavBar = () => {
                   Facebook <i className="bi bi-facebook"></i>
                 </NavDropdown.Item>
               </NavDropdown>
+
+              <NavDropdown title="Productos" id="basic-nav-dropdown">
+                <NavDropdown.Item href='/Category/Frutos-Secos'>
+                  Frutos Secos <i className="bi bi-frutos-secos"></i>
+                </NavDropdown.Item>
+                <NavDropdown.Item href='/Category/Mix'>
+                  Mix <i className="bi bi-mix"></i>
+                </NavDropdown.Item>
+                <NavDropdown.Item href='/Category/Cereales'>
+                  Cereales <i className="bi bi-cereales"></i>
+                </NavDropdown.Item>
+                <NavDropdown.Item href='/Category/Frutas-Desecadas'>
+                  Frutas Desecadas <i className="bi bi-frutas-desecadas"></i>
+                </NavDropdown.Item>
+              </NavDropdown>
             </Nav>
             {/* Carrito de compra */}
             <CartWidget />

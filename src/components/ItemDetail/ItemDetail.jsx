@@ -1,6 +1,7 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card';
 import ItemCount from '../ItemCount/ItemCount';
+
 const ItemDetail = ({product}) => {
     
     const onAdd = (quantity) =>{
