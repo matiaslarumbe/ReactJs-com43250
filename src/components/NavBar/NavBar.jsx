@@ -6,6 +6,7 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import { CartWidget } from "../CartWidget/CartWidget";
 import logo from "../../assets/img/logo.jpg";
 import "./navbar.css"
+import { Link } from "react-router-dom";
 
 
 const NavBar = () => {
@@ -13,13 +14,14 @@ const NavBar = () => {
  
       <Navbar className="navBg" variant="light" expand="lg">
         <Container>
-          <img src={logo} width={"150px"} alt="#" />
-          <Navbar.Brand></Navbar.Brand>
+          <Navbar.Brand as={Link} to='/'>
+              <img src={logo} width={"150px"} alt="#" />
+          </Navbar.Brand>
 
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="#home">Inicio</Nav.Link>
+              <Nav.Link as={Link} to='/'>Inicio</Nav.Link>
               <Nav.Link href="#link">About</Nav.Link>
               <NavDropdown title="Contact" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">
@@ -35,21 +37,21 @@ const NavBar = () => {
               </NavDropdown>
 
               <NavDropdown title="Productos" id="basic-nav-dropdown">
-                <NavDropdown.Item href='/Category/Frutos-Secos'>
+                <NavDropdown.Item as={Link}to='/Category/Fruto Seco'>
                   Frutos Secos <i className="bi bi-frutos-secos"></i>
                 </NavDropdown.Item>
-                <NavDropdown.Item href='/Category/Mix'>
+                <NavDropdown.Item as={Link}to='/Category/Mix'>
                   Mix <i className="bi bi-mix"></i>
                 </NavDropdown.Item>
-                <NavDropdown.Item href='/Category/Cereales'>
+                <NavDropdown.Item as={Link}to='/Category/Cereales'>
                   Cereales <i className="bi bi-cereales"></i>
                 </NavDropdown.Item>
-                <NavDropdown.Item href='/Category/Frutas-Desecadas'>
+                <NavDropdown.Item as={Link}to='/Category/Frutas Desecadas'>
                   Frutas Desecadas <i className="bi bi-frutas-desecadas"></i>
                 </NavDropdown.Item>
               </NavDropdown>
             </Nav>
-            {/* Carrito de compra */}
+           
             <CartWidget />
           </Navbar.Collapse>
         </Container>
