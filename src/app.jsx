@@ -14,15 +14,13 @@ function App () {
            <Routes>
             <Route path='/' element={<ItemListContainer/>} />
             <Route path='/Category/:id' element={<ItemListContainer/>} />
-            <Route path='/detail/:id' element={<DetailPage/>} />
+            <Route path='/item/:id' element={<DetailPage/>} />
            </Routes>  
         </Router>
     )
 }
 
 export default App;
-
-
 
 
 
