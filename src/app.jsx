@@ -7,6 +7,10 @@ import DetailPage from './components/DetailPage/DetailPage';
 import {BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
+// Firebase
+import {db} from "./firebase/firebaseConfig"
+import { collection, query, getDocs } from "firebase/firestore"
+
 function App () {
     return (
         <Router>

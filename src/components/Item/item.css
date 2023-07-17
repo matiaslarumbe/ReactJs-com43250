@@ -6,7 +6,7 @@
     background: rgb(246,199,6);
     background: linear-gradient(90deg, rgba(246,199,6,1) 0%, rgba(244,216,30,0.9640231092436975) 39%, rgba(249,232,145,1) 100%);
     margin-bottom: 20px;
-   
+    object-fit: fill;
     } 
     
     .button-container{
@@ -14,9 +14,22 @@
         display:flex;
         flex-wrap: wrap;
         justify-content:space-between;
-    }
-    .card-image-top{
-       width: 210px;
-       height: 200px;
         
+    }
+   
+    .card-img-top{
+        width: 285px;
+        height: 180px;
+    }
+    .card-body{
+        width: 280px;
+        height: 180px;
+    }
+    .card{
+        width: 250px;
+        height: 480px;
+    }
+    .card-text{
+        width: 220px;
+        height: 130px;
     }

@@ -2,7 +2,7 @@ import React from 'react'
 import Card from 'react-bootstrap/Card';
 import ItemCount from '../ItemCount/ItemCount';
 
-const ItemDetail = ({product}) => {
+const ItemDetail = ({producto}) => {
     
     const onAdd = (quantity) =>{
         console.log(`Agregaste ${quantity} de productos al carrito`)
@@ -11,16 +11,16 @@ const ItemDetail = ({product}) => {
   return (
     <Card style={{ width: '100%' }}>
             
-    <Card.Img variant="top" src={product.image} alt={product.name}/>
+    <Card.Img variant="top" src={producto.image} alt={producto.name}/>
       
        <Card.Body>
            
-           <Card.Title>{product.name}</Card.Title>
+           <Card.Title>{producto.name}</Card.Title>
            <Card.Text>
-                    {product.description}
+                    {producto.description}
            </Card.Text> 
            <Card.Text>
-                   $ {product.price}
+                   $ {producto.price}
            </Card.Text> 
        </Card.Body>
         <ItemCount stock={10} initial={1} onAdd={onAdd}/>

@@ -37,7 +37,7 @@ const NavBar = () => {
               </NavDropdown>
 
               <NavDropdown title="Productos" id="basic-nav-dropdown">
-                <NavDropdown.Item as={Link}to='/Category/Fruto Seco'>
+                <NavDropdown.Item as={Link}to='/Category/Fruto-Seco'>
                   Frutos Secos <i className="bi bi-frutos-secos"></i>
                 </NavDropdown.Item>
                 <NavDropdown.Item as={Link}to='/Category/Mix'>
@@ -46,7 +46,7 @@ const NavBar = () => {
                 <NavDropdown.Item as={Link}to='/Category/Cereales'>
                   Cereales <i className="bi bi-cereales"></i>
                 </NavDropdown.Item>
-                <NavDropdown.Item as={Link}to='/Category/Frutas Desecadas'>
+                <NavDropdown.Item as={Link}to='/Category/Frutas-Desecadas'>
                   Frutas Desecadas <i className="bi bi-frutas-desecadas"></i>
                 </NavDropdown.Item>
               </NavDropdown>
