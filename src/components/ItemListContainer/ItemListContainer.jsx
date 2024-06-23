@@ -1,80 +1,70 @@
-import React,{useState, useEffect} from 'react'
-import { getProducts } from '../../Product';
-import ItemList from '../ItemList/ItemList'
+import React, { useState, useEffect } from 'react';
+// import { getProducts } from '../../Product';
+import ItemList from '../ItemList/ItemList';
+import { pedirDatos } from '../../helpers/pedirDatos';
 import { useParams } from 'react-router-dom';
-import { Link } from "react-router-dom";
-
-
-// FIRBASE - FIRESTORE
-import { collection, query, getDocs } from "firebase/firestore";
-import { db } from "../../firebase/firebaseConfig";
 
 const ItemListContainer = () => {
-  const [productosData, setProductosData] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    const getProductos = async () => {
-      const q = query(collection(db, "productos"));
-      const docs = [];
-      const querySnapshot = await getDocs(q);
-      // console.log('DATA:', querySnapshot);
-      querySnapshot.forEach((doc) => {
-        // console.log('DATA:', doc.data(), 'ID:', doc.id);
-        docs.push({ ...doc.data(), id: doc.id });
-      });
-      // console.log(docs);
-      setProductosData(docs);
-    };
-    getProductos();
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 1000);
-  }, []);
+  const [productos, setProductos] = useState([]);
+  const [titulo, setTitulo] = useState("Productos");
+  const category = useParams().category
+  console.log(category)
+useEffect(() => {
+    pedirDatos()
+      .then((res) => {
+        if(category){
+          setProductos(res.filter((prod) =>prod.category === category) );
+          setTitulo(category)
+        }else{
+          setProductos(res);
+          setTitulo("Productos");
+        }
+      })
+}, [category])
 
-  return (
-    <>
-     
-        <div className="Productos">
-          {productosData.map((data) => {
-            return (
-              <Link
-                to={`/producto-detail/${data.id}`}
-                style={{ textDecoration: "none" }}
-                key={data.id}
-              >
-                <ItemList name={data} />
-              </Link>
-            );
-          })}
-        </div>
-      
-    </>
-  );
-};
+return (
+  <div>
+    <ItemList productos={productos} titulo={titulo} />
+  </div>
+  )
 
-// const ItemListContainer = ({greeting}) => {
-//   const [products, setProducts]= useState([])
-//   const {id} = useParams()
+}
+ 
 
-//   useEffect(()=>{
-//     getProducts()
-//     .then((res)=>{
-//       if(id){
-//         setProducts(res.filter((prod) => prod.category === id))
-//       }else{
-//         setProducts(res)
+export default ItemListContainer;
+
+
+
+
+// const ItemListContainer = () => {
+//   const [productosData, setProductosData] = useState([]);
+//   const [isLoading, setIsLoading] = useState(true);
+
+//   useEffect(() => {
+//     const getProductsData = async () => {
+//       try {
+//         const products = await getProducts();
+//         setProductosData(products);
+//       } catch (error) {
+//         console.error('Error fetching products:', error);
+//       } finally {
+//         setIsLoading(false);
 //       }
-//     })
-//     .catch((error)=> console.log(error))
-//   },[id])
+//     };
+
+//     getProductsData();
+//   }, []);
 
 //   return (
 //     <div>
-//       <p>{greeting}</p>
-//       <ItemList products={products}/>
+//       {isLoading ? (
+//         <p>Loading...</p>
+//       ) : (
+//         <div className="Productos">
+//           <ItemList productos={productosData} />
+//         </div>
+//       )}
 //     </div>
-//   )
-// }
-
-export default ItemListContainer;
+//   );
+// };

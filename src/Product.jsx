@@ -2,7 +2,7 @@ const product = [
     {
         name:"Almendras",
         id:"1",
-        image: "../img/almendras1.jpg",
+        image: "/img/almendras1.jpg",
         category:"Fruto-Seco",
         price:500,
         gram:100,
@@ -12,7 +12,7 @@ const product = [
     {
         name:"Castañas de Caju",
         id:"2",
-        image: "../img/castañas-de-caju2.jpg",
+        image: "/img/castañas-de-caju2.jpg",
         category:"Fruto-Seco",
         price:470,
         gram:100,
@@ -22,7 +22,7 @@ const product = [
     {
         name:"Nueces",
         id:"3",
-        image: "../img/nueces3.jpg",
+        image: "/img/nueces3.jpg",
         category:"Fruto-Seco",
         price:450,
         gram:100,
@@ -32,7 +32,7 @@ const product = [
     {
         name:"Mani con Cascaras",
         id:"4",
-        image: "../img/mani-con-cascara4.jpg",
+        image: "/img/mani-con-cascara4.jpg",
         category:"Fruto-Seco",
         price:200,
         gram:100,
@@ -42,7 +42,7 @@ const product = [
     {
         name:"Mani Pelado",
         id:"5",
-        image: "../img/mani-sin-cascara5.jpg",
+        image: "/img/mani-sin-cascara5.jpg",
         category:"Fruto-Seco",
         price:250,
         gram:100,
@@ -52,7 +52,7 @@ const product = [
     {
         name:"Pistacho",
         id:"6",
-        image: "../img/pistachos6.jpg",
+        image: "/img/pistachos6.jpg",
         category:"Fruto-Seco",
         price:650,
         gram:100,
@@ -62,7 +62,7 @@ const product = [
     {
         name:"Avellana",
         id:"7",
-        image: "../img/avellanas7.jpg",
+        image: "/img/avellanas7.jpg",
         category:"Fruto-Seco",
         price:600,
         gram:100,
@@ -72,7 +72,7 @@ const product = [
     {
         name:"Granola",
         id:"8",
-        image: "../img/granola8.jpg",
+        image: "/img/granola8.jpg",
         category:"Cereales",
         price:450,
         gram:100,
@@ -82,7 +82,7 @@ const product = [
     {
         name:"Avena",
         id:"9",
-        image: "../img/avena9.jpg",
+        image: "/img/avena9.jpg",
         category:"Cereales",
         price:300,
         gram:100,
@@ -92,7 +92,7 @@ const product = [
     {
         name:"Mix Frutos Secos",
         id:"10",
-        image: "../img/mix-frutos-secos10.jpg",
+        image: "/img/mix-frutos-secos10.jpg",
         category:"Mix",
         price:550,
         gram:100,
@@ -102,7 +102,7 @@ const product = [
     {
         name:"Mix de Semillas",
         id:"11",
-        image: "../img/mix-de-semillas11.jpeg",
+        image: "/img/mix-de-semillas11.jpeg",
         category:"Mix",
         price:300,
         gram:100,
@@ -112,7 +112,7 @@ const product = [
     {
         name:"Mix Cervecero",
         id:"12",
-        image: "../img/mix-salado12.jpeg",
+        image: "/img/mix-salado12.jpeg",
         category:"Mix",
         price:400,
         gram:100,
@@ -122,7 +122,7 @@ const product = [
     {
         name:"Mix Tropical",
         id:"13",
-        image: "../img/mix-tropical13.jpg",
+        image: "/img/mix-tropical13.jpg",
         category:"Mix",
         price:450,
         gram:100,
@@ -132,7 +132,7 @@ const product = [
     {
         name:"Frutas Desecadas",
         id:"14",
-        image: "../img/frutas-desecadas14.jpg",
+        image: "/img/frutas-desecadas14.jpg",
         category:"Frutas-Desecadas",
         price:500,
         gram:100,
@@ -142,7 +142,7 @@ const product = [
     {
         name:"Pasas de Uvas",
         id:"15",
-        image: "../img/pasas-de-uvas15.jpg",
+        image: "/img/pasas-de-uvas15.jpg",
         category:"Fruto-Seco",
         price:250,
         gram:100,
@@ -152,7 +152,7 @@ const product = [
     {
         name:"Pasas de Uvas Rubias",
         id:"16",
-        image: "../img/pasas-de-uvas-rubias16.jpg",
+        image: "/img/pasas-de-uvas-rubias16.jpg",
         category:"Fruto-Seco",
         price:250,
         gram:100,
@@ -169,12 +169,16 @@ const product = [
     })
   }
 
-  export const getOneProduct = (id) =>{
-    return new Promise((resolve)=>{
-        let oneproduct = product.find((item)=> item.id === id)
-       
-        setTimeout(()=>{
-            resolve(oneproduct)
-        },1000)
-    })
-  }
+  export const getProductById = (id) => {
+    return new Promise((resolve, reject) => {
+        const foundProduct = product.find((item) => item.id === id); 
+        if (foundProduct) {
+            resolve(foundProduct);
+        } else {
+            reject(new Error("Producto no encontrado"));
+        }
+    });
+};
+
+export default product;
+  

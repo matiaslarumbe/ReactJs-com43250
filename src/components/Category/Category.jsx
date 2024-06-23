@@ -1,20 +1,36 @@
-import React from 'react'
-import { useParams } from 'react-router-dom';
-import ItemList from '../ItemList/ItemList';
-import Item from '../Item/Item'
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import { Link } from 'react-router-dom';
+// import React, { useState, useEffect } from 'react';
+// import { useParams } from 'react-router-dom';
+// import ItemList from '../ItemList/ItemList';
+// import { getProducts } from '../../Product'; // Importa la función getProducts
 
-export const Category = () => {
-    const {categoryId} = useParams()
+// const Category = () => {
+//   const { categoryId } = useParams();
+//   const [categoryProducts, setCategoryProducts] = useState([]);
 
- 
-  return (
-    
-   
-   <></>
-  )
-}
-  
-export default Category;
+//   useEffect(() => {
+//     const fetchCategoryProducts = async () => {
+//       try {
+//         // Llama a la función getProducts para obtener todos los productos
+//         const products = await getProducts();
+//         // Filtra los productos por la categoría seleccionada
+//         const filteredProducts = products.filter(product => product.category.toLowerCase() === categoryId.toLowerCase());
+//         setCategoryProducts(filteredProducts);
+//       } catch (error) {
+//         console.error('Error fetching products:', error);
+//       }
+//     };
+
+//     fetchCategoryProducts();
+//   }, [categoryId]);
+
+//   return (
+//     <div>
+//       <h2>{categoryId} Products</h2>
+//       <ItemList products={categoryProducts} />
+//     </div>
+//   );
+// };
+
+// export default Category;
+
+

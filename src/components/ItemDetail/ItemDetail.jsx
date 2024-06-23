@@ -1,31 +1,30 @@
-import React from 'react'
-import Card from 'react-bootstrap/Card';
-import ItemCount from '../ItemCount/ItemCount';
+import { useState } from "react";
+import ItemCount from "../ItemCount/ItemCount";
 
-const ItemDetail = ({producto}) => {
-    
-    const onAdd = (quantity) =>{
-        console.log(`Agregaste ${quantity} de productos al carrito`)
-    }
+const ItemDetail = ({ item }) => {
+
+  const [cantidad, setCantidad] = useState(1);
+
+  const handleRestar = () => {
+      cantidad > 1 && setCantidad(cantidad - 1)
+  }
+
+  const handleSumar = () => {
+      cantidad < item.stock && setCantidad(cantidad + 1)
+  }
+
+  const handleAgregar = () =>  {
+      console.log( {...item,cantidad} )
+  }
 
   return (
-    <Card style={{ width: '100%' }}>
-            
-    <Card.Img variant="top" src={producto.image} alt={producto.name}/>
-      
-       <Card.Body>
-           
-           <Card.Title>{producto.name}</Card.Title>
-           <Card.Text>
-                    {producto.description}
-           </Card.Text> 
-           <Card.Text>
-                   $ {producto.price}
-           </Card.Text> 
-       </Card.Body>
-        <ItemCount stock={10} initial={1} onAdd={onAdd}/>
-   </Card>
-  )
-}
+    <div className="item-detail">
+        <h3>{item.name}</h3>
+        <img src={item.image} alt={item.name} />
+        <p>{item.description}</p>
+        <ItemCount cantidad= {cantidad} handleRestar = {handleRestar} handleSumar = {handleSumar} handleAgregar = {handleAgregar} />
+    </div>
+  );
+};
 
-export default ItemDetail
+export default ItemDetail;

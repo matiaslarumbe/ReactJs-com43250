@@ -1,22 +1,25 @@
 import React, {useState, useEffect} from 'react'
 import { useParams } from 'react-router-dom';
-import { getOneProduct } from '../../Product';
+import { getProducts } from '../../Product'; 
 import ItemDetail from '../ItemDetail/ItemDetail';
 
 const DetailPage = () => {
-    const [product, setProduct]= useState({})
+    const [productos, setProductos]= useState({})
 
     const {id} = useParams()
 
     useEffect(()=>{
-        getOneProduct(id)
-        .then((res)=> setProduct(res))
+        getProducts() // Llamar a la función getProducts
+        .then((res) => {
+            const product = res.find(item => item.id === id); // Encontrar el producto por su id
+            setProductos(product);
+        })
         .catch(error=> console.log(error))
-    },[id])
+    }, [id])
    
     return (
     <div>
-        <ItemDetail product={product}/>
+        <ItemDetail productos={productos}/>
     </div>
     )
 }
