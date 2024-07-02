@@ -33,6 +33,9 @@ const NavBar = () => {
               <NavDropdown.Item href="https://www.facebook.com/">
                 Facebook <i className="bi bi-facebook"></i>
               </NavDropdown.Item>
+              <NavDropdown.Item href="/contacto">
+                Email <i class="bi bi-envelope-at"></i>
+              </NavDropdown.Item>
             </NavDropdown>
 
             <NavDropdown title="Products" id="collasible-nav-dropdown">

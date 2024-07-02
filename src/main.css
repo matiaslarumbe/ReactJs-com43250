@@ -10,10 +10,11 @@ body {
 }
 
 .container {
+    
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 20px auto;
     background: linear-gradient(90deg, rgb(3, 176, 64) 0%, rgb(5, 244, 61) 100%); /* Fondo blanco para el contenido principal */
     box-shadow: 0 0 10px rgba(244, 20, 20, 0.1); /* Sombra para elevar el contenido */
     border-radius: 8px; /* Bordes redondeados para suavizar el aspecto */
@@ -122,6 +123,8 @@ button:active, .btn:active {
     border: 1px solid #ddd; /* Borde suave */
     border-radius: 8px; /* Bordes redondeados */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para elevar el contenido */
+    font-size: 2rem;
+    
 }
 
 .item-detail img {
@@ -131,6 +134,12 @@ button:active, .btn:active {
     margin: 20px 0;
     border: 1px solid #ddd; /* Borde suave para la imagen */
     border-radius: 8px;
+}
+/* item-detail */
+.price {
+    font-size: 2rem;
+    margin-top: 2rem;
+    font-weight: 600;
 }
 
 
@@ -198,4 +207,60 @@ button:active, .btn:active {
 .item-count .btn-comprar:disabled {
     background-color: #ccc; /* Color de fondo cuando está deshabilitado */
     cursor: not-allowed;
+}
+
+
+/* Contact.jsx  Styles */
+.formulario {
+    display: flex;
+    flex-direction:column ;
+    gap: 30px;
+    margin: 10px 0;
+    padding: 10px;
+    width: 50%;
+}
+
+.input-field {
+    
+    width: 50%;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+.input-field:focus {
+    border-color: #0cb51b;
+    outline: none;
+    
+}
+
+/* Botón de envío en el formulario de contacto */
+.enviar {
+    background-color: #0cb51b; 
+    color: #fff; 
+    border: none; 
+    border-radius: 4px; 
+    padding: 10px 10px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+    font-size: 14px; 
+    margin-top: 5px; 
+    width: 50%;
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+.enviar:hover {
+    background-color: #0ae24b; 
+}
+
+.enviar:active {
+    background-color: #001a3a; 
+}
+.contact-container {
+   
+    margin-top: 10px; /* Ajusta este valor según tus necesidades */
 }

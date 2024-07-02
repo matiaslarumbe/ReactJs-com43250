@@ -1,12 +1,17 @@
-import React from 'react'
-// carrito contador
-import Badge from 'react-bootstrap/Badge';
-import Button from 'react-bootstrap/Button';
+import React, { useContext } from 'react'
+import { Link } from 'react-router-dom';
+import { CartContext } from '../../Context/CartContext';
 
 export const CartWidget = () => {
+  
+  const {cantidadEnCarrito} = useContext(CartContext)
+
   return (
     <div>
-        <i className ="bi bi-cart2">(5)</i>
+          <Link className ="bi bi-cart2" to="/carrito">
+           {cantidadEnCarrito()}
+          </Link>
     </div>
   )
 }
+export default CartWidget
