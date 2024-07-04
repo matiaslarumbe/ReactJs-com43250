@@ -14,6 +14,7 @@ import Contact from "./components/Contact.jsx/Contact";
 import { CartProvider } from "./Context/CartContext";
 import Item from "./components/Item/Item";
 import Carrito from "./components/Carrito/Carrito";
+import Checkout from "./Checkout/Checkout";
 
 
 
@@ -30,6 +31,7 @@ function App() {
           <Route path="/productos/:category" element={<ItemListContainer />} />
           <Route path="/contacto" element={<Contact />} />
           <Route path="/carrito" element={<Carrito />} />
+          <Route path="/checkout" element={<Checkout />} />
         </Routes>
       </BrowserRouter>
     </CartProvider>

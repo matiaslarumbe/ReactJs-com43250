@@ -15,7 +15,7 @@ useEffect(() => {
    
     const productosRef = collection(db, "productos")
     
-    const q = query(productosRef, where("category", "==", category))
+    const q = category ? query(productosRef, where("category", "==", category)) : productosRef;
     
     getDocs(q)
     .then((resp) => {

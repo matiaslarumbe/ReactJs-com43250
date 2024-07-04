@@ -9,7 +9,7 @@ const Item = ({ producto }) => {
       <Card style={{ width: '18rem' }}>
         {producto && (
           <>
-            <Card.Img className="card-img-top" variant="top" src={producto.image} />
+            <Card.Img className="card-img-top" variant="top" src={producto.img} />
             <Card.Body>
               <Card.Title>{producto.name}</Card.Title>
               <Card.Text>{producto.description}</Card.Text>
