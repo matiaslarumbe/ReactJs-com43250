@@ -3,28 +3,26 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f5; /* Color de fondo suave y profesional */
     color: #333; /* Color de texto para buen contraste */
-    margin:0;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
 
 .container {
-    
     width: 100%;
     max-width: 1200px;
-    margin: 20 auto;
-    padding: 25px ;
-    background: linear-gradient(90deg, rgb(3, 176, 64) 0%, rgb(5, 244, 61) 100%); /* Fondo blanco para el contenido principal */
-    box-shadow: 0 0 10px rgba(244, 20, 20, 0.1); /* Sombra para elevar el contenido */
-    border-radius: 8px; /* Bordes redondeados para suavizar el aspecto */
+    margin: 20px auto;
+    padding: 25px;
+    background: linear-gradient(90deg, rgb(3, 176, 64) 0%, rgb(5, 244, 61) 100%);
+    box-shadow: 0 0 10px rgba(244, 20, 20, 0.1);
+    border-radius: 8px;
 }
 
 /* Navbar Styles */
 .navBg {
-    background-color: #23f353; /* Fondo azul profesional */
+    background-color: #23f353;
     background: linear-gradient(90deg, rgb(1, 161, 62) 0%, rgb(15, 247, 46) 100%);
-    color: #fff; /* Color de texto blanco para contraste */
+    color: #fff;
 }
 
 .navbar-brand img {
@@ -33,7 +31,6 @@ body {
 
 .navbar-nav .nav-link {
     margin-right: 15px;
-    
 }
 
 .navbar-nav .nav-item .dropdown-menu a {
@@ -54,20 +51,21 @@ body {
     display: flex;
     justify-content: center;
     margin: 20px;
+    flex-wrap: wrap;
 }
 
 .card {
     margin: 20px;
     width: 18rem;
-    background-color: #fff; /* Fondo blanco para las tarjetas */
-    border: 1px solid #ddd; /* Borde suave para las tarjetas */
-    border-radius: 8px; /* Bordes redondeados */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .card-img-top {
     width: 100%;
-    height: 200px; 
+    height: 200px;
     object-fit: cover;
     padding: 10px;
 }
@@ -78,36 +76,32 @@ body {
     align-items: center;
     text-align: center;
     padding: 10px;
-    
 }
 
 .button-container {
     margin-top: 10px;
-    
-  
 }
 
 button, .btn {
-    background-color: #0cb51b; /* Color de fondo del botón */
-    color: #fff; /* Color del texto */
-    border: none; /* Sin borde */
-    border-radius: 4px; /* Bordes redondeados */
-    padding: 10px 20px; /* Espaciado interno */
-    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
-    transition: background-color 0.3s ease; /* Transición suave al pasar sobre el botón */
+    background-color: #0cb51b;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 /* Cambiar color al pasar el ratón sobre el botón */
 button:hover, .btn:hover {
-    background-color: #0ae24b; /* Color de fondo al pasar el ratón */
+    background-color: #0ae24b;
 }
 
 /* Cambiar color al hacer clic en el botón */
 button:active, .btn:active {
-    background-color: #001a3a; /* Color de fondo al hacer clic */
+    background-color: #001a3a;
 }
 
-/* Botón dentro del contenedor de botones */
 .button-container .btn {
     margin-top: 10px;
 }
@@ -118,30 +112,29 @@ button:active, .btn:active {
     flex-direction: column;
     align-items: center;
     margin: 20px;
-    background-color: #fff; /* Fondo blanco para el detalle del item */
+    background-color: #fff;
     padding: 20px;
-    border: 1px solid #ddd; /* Borde suave */
-    border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para elevar el contenido */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     font-size: 2rem;
-    
 }
 
 .item-detail img {
-    width: 350px; 
-    height: 300px; 
+    width: 100%;
+    max-width: 350px;
+    height: auto;
     object-fit: cover;
     margin: 20px 0;
-    border: 1px solid #ddd; /* Borde suave para la imagen */
+    border: 1px solid #ddd;
     border-radius: 8px;
 }
-/* item-detail */
+
 .price {
     font-size: 2rem;
     margin-top: 2rem;
     font-weight: 600;
 }
-
 
 /* ItemCount.jsx Styles */
 .item-count {
@@ -160,21 +153,21 @@ button:active, .btn:active {
 
 .item-count-buttons .btn {
     margin: 0 5px;
-    background-color: #0cb51b; /* Color de fondo del botón */
-    color: #fff; /* Color del texto */
-    border: none; /* Sin borde */
-    border-radius: 4px; /* Bordes redondeados */
-    padding: 10px 20px; /* Espaciado interno */
-    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
-    transition: background-color 0.3s ease; /* Transición suave al pasar sobre el botón */
+    background-color: #0cb51b;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .item-count-buttons .btn:hover {
-    background-color: #0ae24b; /* Color de fondo al pasar el ratón */
+    background-color: #0ae24b;
 }
 
 .item-count-buttons .btn:active {
-    background-color: #001a3a; /* Color de fondo al hacer clic */
+    background-color: #001a3a;
 }
 
 .item-count-display {
@@ -187,42 +180,41 @@ button:active, .btn:active {
 
 .item-count .btn-comprar {
     margin-top: 10px;
-    background-color: #0cb51b; /* Color de fondo del botón */
-    color: #fff; /* Color del texto */
-    border: none; /* Sin borde */
-    border-radius: 4px; /* Bordes redondeados */
-    padding: 10px 20px; /* Espaciado interno */
-    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
-    transition: background-color 0.3s ease; /* Transición suave al pasar sobre el botón */
+    background-color: #0cb51b;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .item-count .btn-comprar:hover {
-    background-color: #0ae24b; /* Color de fondo al pasar el ratón */
+    background-color: #0ae24b;
 }
 
 .item-count .btn-comprar:active {
-    background-color: #001a3a; /* Color de fondo al hacer clic */
+    background-color: #001a3a;
 }
 
 .item-count .btn-comprar:disabled {
-    background-color: #ccc; /* Color de fondo cuando está deshabilitado */
+    background-color: #ccc;
     cursor: not-allowed;
 }
 
-
-/* Contact.jsx  Styles */
+/* Contact.jsx Styles */
 .formulario {
     display: flex;
-    flex-direction:column ;
+    flex-direction: column;
     gap: 30px;
     margin: 10px 0;
     padding: 10px;
-    width: 50%;
+    width: 100%;
+    max-width: 600px;
 }
 
 .input-field {
-    
-    width: 50%;
+    width: 100%;
     padding: 5px;
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -233,82 +225,152 @@ button:active, .btn:active {
 .input-field:focus {
     border-color: #0cb51b;
     outline: none;
-    
 }
 
-/* Botón de envío en el formulario de contacto */
 .enviar {
-    background-color: #0cb51b; 
-    color: #fff; 
-    border: none; 
-    border-radius: 4px; 
-    padding: 10px 10px; 
-    cursor: pointer; 
-    transition: background-color 0.3s ease; 
-    font-size: 14px; 
-    margin-top: 5px; 
-    width: 50%;
-    display: block; 
-    margin-left: auto; 
-    margin-right: auto; 
+    background-color: #0cb51b;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+    margin-top: 5px;
+    width: 100%;
+    display: block;
 }
 
 .enviar:hover {
-    background-color: #0ae24b; 
+    background-color: #0ae24b;
 }
 
 .enviar:active {
-    background-color: #001a3a; 
-}
-.contact-container {
-   
-    margin-top: 10px; /* Ajusta este valor según tus necesidades */
+    background-color: #001a3a;
 }
 
-/* boton carrito */
+.contact-container {
+    margin-top: 10px;
+}
+
+/* Botón carrito */
 .finalizar-compra {
-    background-color: #0cb51b; /* Color de fondo del botón */
-    color: #fff; /* Color del texto */
-    border: none; /* Sin borde */
-    border-radius: 4px; /* Bordes redondeados */
-    padding: 10px 20px; /* Espaciado interno */
-    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
-    transition: background-color 0.3s ease; /* Transición suave al pasar sobre el botón */
-    text-align: center; /* Centrar el texto */
-    display: inline-block; /* Hacer que el enlace se comporte como un botón */
-    text-decoration: none; /* Quitar subrayado */
-    font-size: 16px; /* Tamaño de fuente */
-    margin-top: 10px; /* Margen superior */
+    background-color: #0cb51b;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 10px;
 }
 
 .finalizar-compra:hover {
-    background-color: #0ae24b; /* Color de fondo al pasar el ratón */
+    background-color: #0ae24b;
 }
 
 .finalizar-compra:active {
-    background-color: #001a3a; /* Color de fondo al hacer clic */
+    background-color: #001a3a;
 }
 
-
 .cart-link {
-    background-color: #0cb51b; /* Color de fondo del botón */
-    color: #fff; /* Color del texto */
-    border: none; /* Sin borde */
-    border-radius: 4px; /* Bordes redondeados */
-    padding: 10px 20px; /* Espaciado interno */
-    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
-    transition: background-color 0.3s ease; /* Transición suave al pasar sobre el botón */
-    text-align: center; /* Centrar el texto */
-    display: inline-block; /* Hacer que el enlace se comporte como un botón */
-    text-decoration: none; /* Quitar subrayado */
-    font-size: 16px; /* Tamaño de fuente */
-    margin-top: 10px; /* Margen superior */
+    background-color: #0cb51b;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 10px;
 }
 
 .cart-link:hover {
-    background-color: #0ae24b; /* Color de fondo al pasar el ratón */
+    background-color: #0ae24b;
 }
 
 .cart-link:active {
-    background-color: #001a3a; /* Color de fondo al hacer clic */
+    background-color: #001a3a;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .container {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        padding: 15px;
+    }
+
+    .navbar-brand img {
+        width: 120px;
+    }
+
+    .card {
+        width: 16rem;
+    }
+
+    .item-detail {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .navbar-brand img {
+        width: 100px;
+    }
+
+    .card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .item-detail {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 5px;
+    }
+
+    .navbar-brand img {
+        width: 80px;
+    }
+
+    .card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .item-detail {
+        font-size: 1rem;
+    }
+
+    .formulario {
+        width: 100%;
+    }
+
+    .input-field {
+        width: 100%;
+    }
+
+    .enviar {
+        width: 100%;
+    }
 }
