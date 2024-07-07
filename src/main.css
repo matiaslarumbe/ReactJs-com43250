@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f5; /* Color de fondo suave y profesional */
     color: #333; /* Color de texto para buen contraste */
-    margin: 0;
+    margin:0;
     padding: 0;
     box-sizing: border-box;
     
@@ -13,8 +13,8 @@ body {
     
     width: 100%;
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px auto;
+    margin: 20 auto;
+    padding: 25px ;
     background: linear-gradient(90deg, rgb(3, 176, 64) 0%, rgb(5, 244, 61) 100%); /* Fondo blanco para el contenido principal */
     box-shadow: 0 0 10px rgba(244, 20, 20, 0.1); /* Sombra para elevar el contenido */
     border-radius: 8px; /* Bordes redondeados para suavizar el aspecto */
@@ -45,7 +45,7 @@ body {
 .main-title {
     width: 100%;
     text-align: center;
-    margin: 20px 0;
+    margin: 20px;
     color: #06c933;
 }
 
@@ -263,4 +263,52 @@ button:active, .btn:active {
 .contact-container {
    
     margin-top: 10px; /* Ajusta este valor según tus necesidades */
+}
+
+/* boton carrito */
+.finalizar-compra {
+    background-color: #0cb51b; /* Color de fondo del botón */
+    color: #fff; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease; /* Transición suave al pasar sobre el botón */
+    text-align: center; /* Centrar el texto */
+    display: inline-block; /* Hacer que el enlace se comporte como un botón */
+    text-decoration: none; /* Quitar subrayado */
+    font-size: 16px; /* Tamaño de fuente */
+    margin-top: 10px; /* Margen superior */
+}
+
+.finalizar-compra:hover {
+    background-color: #0ae24b; /* Color de fondo al pasar el ratón */
+}
+
+.finalizar-compra:active {
+    background-color: #001a3a; /* Color de fondo al hacer clic */
+}
+
+
+.cart-link {
+    background-color: #0cb51b; /* Color de fondo del botón */
+    color: #fff; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease; /* Transición suave al pasar sobre el botón */
+    text-align: center; /* Centrar el texto */
+    display: inline-block; /* Hacer que el enlace se comporte como un botón */
+    text-decoration: none; /* Quitar subrayado */
+    font-size: 16px; /* Tamaño de fuente */
+    margin-top: 10px; /* Margen superior */
+}
+
+.cart-link:hover {
+    background-color: #0ae24b; /* Color de fondo al pasar el ratón */
+}
+
+.cart-link:active {
+    background-color: #001a3a; /* Color de fondo al hacer clic */
 }
