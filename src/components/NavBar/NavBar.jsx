@@ -14,7 +14,7 @@ const NavBar = () => {
     <Navbar className="navBg" variant="light" expand="lg">
       <Container>
         <Navbar.Brand as={Link} to='/'>
-            <img src={logo} width={"150px"} alt="#" />
+            <img src={logo} width={"150px"} alt="Logo" />
         </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
