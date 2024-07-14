@@ -14,7 +14,8 @@ import Contact from "./components/Contact.jsx/Contact";
 import { CartProvider } from "./Context/CartContext";
 import Item from "./components/Item/Item";
 import Carrito from "./components/Carrito/Carrito";
-import Checkout from "./Checkout/Checkout";
+import Checkout from "./components/Checkout/Checkout";
+
 
 
 
